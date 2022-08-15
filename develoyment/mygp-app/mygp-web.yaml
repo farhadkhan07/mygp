@@ -1,8 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-gp-web-v1
-  namespace: my-gp
+  name: my-gp-web
+  #  namespace: my-gp
   labels:
     app: web
     tier: development
