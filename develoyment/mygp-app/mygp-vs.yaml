@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: web-ingress
+  namespace: my-gp
+spec:
+  hosts:
+  - "web.mygp.net"
+  gateways:
+  - gateway-gp
+  http:
+  - route:
+    - destination:
+        host: gp-service
+        port:
+          number: 80
